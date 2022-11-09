@@ -5,25 +5,54 @@
   <title>Fancy Form</title>
 
   <!-- You may add more stuff here -->
+  <script src="https://kit.fontawesome.com/5cf9b494d9.js" crossorigin="anonymous"></script>
   <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
-
   <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
-  <form onsubmit="return !1">
-    <label for="input-address">ETH Address</label>
-    <input id="input-address" />
+  <div class="form-wrapper">
+    <div class="header-wrapper">
+      <i class="fa-solid fa-money-bill-transfer icon fa-3x"></i>
+      <h2>Transaction</h3>
+    </div>
+    <form onsubmit="return !1">
+      <div class="input-wrapper">
+        <span class="fa-stack fa icon-stack fa-xl">
+          <i class="fa-solid fa-square fa-stack-2x" style="color:#323232"></i>
+          <i class="fa-brands fa-ethereum icon fa-stack-1x fa-inverse"></i>
+        </span>
+        <input type="number" id="input-amount" placeholder="Amount of ETH to send" min="0" required></input>
+      </div>
 
-    <label for="input-amount">Amount to send</label>
-    <input id="input-amount" />
+      <div class="input-wrapper">
+        <span class="fa-stack fa icon-stack fa-xl">
+          <i class="fa-solid fa-square fa-stack-2x" style="color:#323232"></i>
+          <i class="fa-solid fa-at icon fa-stack-1x fa-inverse"></i>
+        </span>
+        <input id="input-address" placeholder="Recipient address" required/>
+      </div>
 
-    <label for="input-otp">OTP Authentication</label>
-    <input type="number" id="input-otp" />
 
-    <button>SEND TOKENS</button>
-  </form>
-  <script src="script.js"></script>
+      <div class="input-wrapper">        
+        <span class="fa-stack fa icon-stack fa-xl">
+          <i class="fa-solid fa-square fa-stack-2x" style="color:#323232"></i>
+          <i class="fa-solid fa-lock icon fa-stack-1x fa-inverse"></i>
+        </span>
+        <div class="otp-cells-wrapper">
+          <input type="number" class="otp-cell" id="input-otp" placeholder="0" min="0" max="9" required/>
+          <input type="number" class="otp-cell" id="input-otp" placeholder="0" min="0" max="9" required/>
+          <input type="number" class="otp-cell" id="input-otp" placeholder="0" min="0" max="9" required/>
+          <input type="number" class="otp-cell" id="input-otp" placeholder="0" min="0" max="9" required/>
+          <input type="number" class="otp-cell" id="input-otp" placeholder="0" min="0" max="9" required/>
+          <input type="number" class="otp-cell" id="input-otp" placeholder="0" min="0" max="9" required/>
+        </div>
+      </div>
+
+      <button class="send-button"><i class="fa-solid fa-paper-plane icon"></i> SEND TOKENS</button>
+    </form>
+  </div>
+  <script src="script.js" type="module"></script>
 </body>
 
 </html>
