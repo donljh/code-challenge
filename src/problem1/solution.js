@@ -9,7 +9,7 @@ var sum_to_n_a = function(n) {
     if (n < 0) return 0; // invalid input
     // for loop iteration
     let sum = 0; 
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i <= n; i++) {
         sum += i;
     }
     return sum;
