@@ -11,3 +11,26 @@ cells.forEach((cell, idx) => {
         }
     })
 })
+
+const toasts = document.querySelector('#toasts');
+const form = document.querySelector('form')
+const inputs = document.querySelectorAll('input')
+const amountInput = document.querySelector('#input-amount');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    createToastNotification(amountInput.value);
+    inputs.forEach((input) => input.value = '');
+})
+
+function createToastNotification(amount) {
+    const toast = document.createElement('div')
+    toast.classList.add('toast')
+    toast.innerText = `${amount} ETH successfully sent!`
+
+    toasts.appendChild(toast)
+
+    setTimeout(() => {
+        toast.remove();
+    }, 3000)
+}
