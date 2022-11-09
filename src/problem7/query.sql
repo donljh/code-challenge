@@ -1,11 +1,3 @@
--- Select addresses 
--- which have block_length > 730000 (recently made a trade)
--- has balance >= 500
--- where to calculate balance from denom:
--- usdc * 0.000001
--- swth * 0.00000005
--- tmz * 0.003
-
 SELECT DISTINCT address 
 FROM trades
 WHERE address

@@ -1,4 +1,3 @@
-// const { ethers } = require("ethers");
 import { ethers } from "ethers";
 
 // Given $SWTH Token Contract
@@ -22,7 +21,6 @@ const addressesToLookUp: string[] = [
     "0x0020c5222a24e4a96b720c06b803fb8d34adc0af",
     "0xd1d8b2aae2ebb2acf013b803bc3c24ca1303a392"
 ];
-
 
 // Async function wrapper that retrieves holders, logs results according to problem description
 const retrieveHolders = async () => {
